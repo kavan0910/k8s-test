@@ -2,9 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: 'Build app1'
   args:
-  - 'cd'
-  - 'app1'
-  - '&&'
   - 'build'
   - '-t'
   - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest'
