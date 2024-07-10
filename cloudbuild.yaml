@@ -1,20 +1,20 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  id: 'Build Docker Image'
+  id: 'Build Docker Image for app1'
   args: ['cd', 'app1', '&&', 'build', '-t', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  id: 'Build Docker Image'
-  args: ['cd', 'app2', '&&', 'build', '-t', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app2', '.']
+  id: 'push Docker Image for app1'
+  args: ['push', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1']
+
 options:
   logging: CLOUD_LOGGING_ONLY
 
 # - name: 'gcr.io/cloud-builders/docker'
-#   id: 'push Docker Image'
-#   args: ['push', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1'] 
-
+#   id: 'Build Docker Image for app2'
+#   args: ['cd', 'app2', '&&', 'build', '-t', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app2', '.']
 # - name: 'gcr.io/cloud-builders/docker'
-#   id: 'push Docker Image'
+#   id: 'push Docker Image for app2'
 #   args: ['push', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app2']
 
 # create k8s cluster aur update image 
