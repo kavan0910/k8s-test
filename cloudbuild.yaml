@@ -1,11 +1,18 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  id: 'Build Docker Image for app1'
-  args: ['docker', 'build', '-t', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1', '.']
+  id: 'Build app1'
+  args:
+  - 'build'
+  - '-t'
+  - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest'
+  - '.'
 
 - name: 'gcr.io/cloud-builders/docker'
   id: 'push Docker Image for app1'
-  args: ['docker', 'push', 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1']
+  args:
+  - 'push'
+  - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest'
+
 
 options:
   logging: CLOUD_LOGGING_ONLY
