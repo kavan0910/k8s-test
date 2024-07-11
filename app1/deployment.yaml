@@ -46,7 +46,7 @@ spec:
       - name: app-1
         image: us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: app1-data
           mountPath: /kavan/files
@@ -64,6 +64,6 @@ spec:
     app: app-1
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 8080
+    targetPort: 8080
   type: LoadBalancer
