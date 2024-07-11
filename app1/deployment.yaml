@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: app-1
-        image: us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest
+        image: us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app-1:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
