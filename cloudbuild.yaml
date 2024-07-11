@@ -14,11 +14,12 @@ steps:
   - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest'
 
 
-- name: 'gcr.io/cloud-builders/gke-deploy'
+- name: 'gcr.io/cloud-builders/gcloud'
   id: 'Deploy app1'
+  entrypoint: 'bash'
   args:
-  - run
-  - --filename=/app1/deployment.yaml
+  - '-c'
+  - kubectl apply -f app1/deployment.yaml
 
 
 options:
