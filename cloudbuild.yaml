@@ -14,7 +14,7 @@ steps:
   - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app-1:latest'
 
 - name: 'gcr.io/cloud-builders/kubectl'
-  id: 'Deploy app1'
+  id: 'remove app1'
   args:
   - 'delete'
   - '-f'
