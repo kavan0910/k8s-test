@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: app-1
-        image: us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app-1:lates
+        image: us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app-1:latest
         ports:
         - containerPort: 8000
         volumeMounts:
