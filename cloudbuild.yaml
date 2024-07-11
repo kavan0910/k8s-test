@@ -14,12 +14,15 @@ steps:
   - 'us-central1-docker.pkg.dev/kube-assignment-428815/cloud-k8s-repository/app1:latest'
 
 
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/kubectl'
   id: 'Deploy app1'
-  entrypoint: 'bash'
   args:
-  - '-c'
-  - kubectl apply -f app1/deployment.yaml
+  - 'apply' 
+  - '-f'
+  - 'app1/deployment.yaml'
+  env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=k8s'
 
 
 options:
