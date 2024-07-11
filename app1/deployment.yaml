@@ -9,7 +9,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   gcePersistentDisk:
-    pdName: compute_disk
+    pdName: compute-disk
     fsType: ext4
 
 ---
