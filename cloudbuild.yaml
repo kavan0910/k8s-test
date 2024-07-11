@@ -21,7 +21,9 @@ steps:
   - 'apply'
   - '-f'
   - 'app1/deployment.yaml'
-
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=kube-cluster'
 
 
 options:
