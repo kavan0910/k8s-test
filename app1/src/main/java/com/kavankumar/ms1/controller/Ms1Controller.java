@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 public class Ms1Controller {
     @PostMapping("/store-file")
     public Map<String, String> storeFile(@RequestBody Request request) {
-        final String STORAGE_LOCATION = "/kavan/files";
+        final String STORAGE_LOCATION = "/app";
 
         if(request.getFile() == null){
             HashMap<String, String> map = new HashMap<>();
