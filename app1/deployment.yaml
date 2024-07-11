@@ -54,7 +54,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: app1-data
-          mountPath: /kavan/files
+          mountPath: /app/kavan/files
       volumes:
       - name: app1-data
         persistentVolumeClaim:
